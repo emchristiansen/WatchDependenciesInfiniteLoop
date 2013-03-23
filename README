@@ -1,0 +1,23 @@
+Possible SBT bug: http://stackoverflow.com/questions/15562310/scala-sbt-triggering-an-action-when-local-dependencies-change
+
+Start SBT and execute ~compile, and you should enter an infinite loop:
+
+> ~compile
+[warn] Potentially incompatible versions of dependencies of {file:/wg/stor6_home3/echristiansen/delme/watchdependenciesinfiniteloop/}WatchDependenciesInfiniteLoop:
+[warn]    org.scala-lang: 2.10.1, 2.10.0
+[warn] Potentially incompatible versions of dependencies of {file:/wg/stor6_home3/echristiansen/delme/watchdependenciesinfiniteloop/}WatchDependenciesInfiniteLoop:
+[warn]    org.scala-lang: 2.10.1, 2.10.0
+[warn] Potentially incompatible versions of dependencies of {file:/wg/stor6_home3/echristiansen/delme/watchdependenciesinfiniteloop/}WatchDependenciesInfiniteLoop:
+[warn]    org.scala-lang: 2.10.1, 2.10.0
+[success] Total time: 0 s, completed Mar 23, 2013 11:56:45 AM
+1. Waiting for source changes... (press enter to interrupt)
+[warn] Potentially incompatible versions of dependencies of {file:/wg/stor6_home3/echristiansen/delme/watchdependenciesinfiniteloop/}WatchDependenciesInfiniteLoop:
+[warn]    org.scala-lang: 2.10.1, 2.10.0
+[warn] Potentially incompatible versions of dependencies of {file:/wg/stor6_home3/echristiansen/delme/watchdependenciesinfiniteloop/}WatchDependenciesInfiniteLoop:
+[warn]    org.scala-lang: 2.10.1, 2.10.0
+[warn] Potentially incompatible versions of dependencies of {file:/wg/stor6_home3/echristiansen/delme/watchdependenciesinfiniteloop/}WatchDependenciesInfiniteLoop:
+[warn]    org.scala-lang: 2.10.1, 2.10.0
+[warn] Potentially incompatible versions of dependencies of {file:/wg/stor6_home3/echristiansen/delme/watchdependenciesinfiniteloop/}WatchDependenciesInfiniteLoop:
+[warn]    org.scala-lang: 2.10.1, 2.10.0
+[warn] Potentially incompatible versions of dependencies of {file:/wg/stor6_home3/echristiansen/delme/watchdependenciesinfiniteloop/}WatchDependenciesInfiniteLoop:
+[warn]    org.scala-lang: 2.10.1, 2.10.0
